@@ -5,11 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
     <link rel="stylesheet" href="layout.css" />
+    <link
+      rel="shortcut icon"
+      href="img/portfolio_logo.png"
+      type="image/x-icon"
+    />
   </head>
   <body>
+    <video autoplay muted loop id="bg_video">
+      <source src="video/bgvid_green.mp4" type="video/mp4" />
+    </video>
     <header class="header">
       <nav class="navbar">
-        <a href="index.html" class="nav-logo">RJFN</a>
+        <a href="index.html" class="nav-logo"
+          ><img src="img/logo_2.png" alt="logo"
+        /></a>
         <ul class="nav-menu">
           <li class="nav-item">
             <a href="index.html" class="nav-link">Forside</a>
@@ -32,13 +42,39 @@
     </header>
     <main>
       <div class="grid_1-1">
-        <div class="fade-in-section" id="box01">TEMA 1</div>
-        <div class="fade-in-section" id="box02">TEMA 2</div>
+        <a
+          class="fade-in-section"
+          id="box01"
+          href="https://rebekkamedia.dk/T2/mobilsite/index.html"
+          ><img src="img/t2_mobilsite.PNG" alt="mobilsite"
+        /></a>
+
+        <a
+          class="fade-in-section"
+          id="box02"
+          href="https://rebekkamedia.dk/Emnesite/"
+          ><img src="img/t3_emnesite.PNG" alt="emnesite"
+        /></a>
       </div>
       <div class="grid_1-1-1">
-        <div class="fade-in-section" id="box03">TEMA 3</div>
-        <div class="fade-in-section" id="box04">TEMA 4</div>
-        <div class="fade-in-section" id="box05">TEMA 5</div>
+        <a
+          class="fade-in-section"
+          id="box03"
+          href="https://rebekkamedia.dk/T4/website/spil.html"
+          ><img src="img/t4_spil.PNG" alt="Mit spil"
+        /></a>
+        <a
+          class="fade-in-section"
+          id="box04"
+          href="https://rebekkamedia.dk/T5/passionsite/index.html"
+          ><img src="img/t5_passionsite.PNG" alt="Passionsite"
+        /></a>
+        <a
+          class="fade-in-section"
+          id="box05"
+          href="https://rebekkamedia.dk/T5/ordrupslagter/"
+          ><img src="img/t5_virksomhedssite.PNG" alt="Virksomhedssite"
+        /></a>
       </div>
     </main>
     <footer>&copy;REBEKKA NUTZHORN</footer>

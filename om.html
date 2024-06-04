@@ -5,11 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Om mig</title>
     <link rel="stylesheet" href="layout.css" />
+    <link
+      rel="shortcut icon"
+      href="img/portfolio_logo.png"
+      type="image/x-icon"
+    />
   </head>
   <body>
+    <video autoplay muted loop id="bg_video">
+      <source src="video/bgvid_green.mp4" type="video/mp4" />
+    </video>
     <header class="header">
       <nav class="navbar">
-        <a href="index.html" class="nav-logo">RJFN</a>
+        <a href="index.html" class="nav-logo"
+          ><img src="img/logo_2.png" alt="logo"
+        /></a>
         <ul class="nav-menu">
           <li class="nav-item">
             <a href="index.html" class="nav-link">Forside</a>
@@ -36,16 +46,29 @@
         <div>
           <img src="img/ommig.jpg" alt="billede af mig" />
         </div>
-        <div id="ommigtekst">
+        <div>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae minus
-            hic aliquid harum enim fugiat aperiam veritatis incidunt suscipit
-            tenetur dicta est, voluptas recusandae aut rem nulla error.
-            Nesciunt, blanditiis.
+            Hej! Jeg hedder Rebekka og jeg er 23 år gammel. Jeg går på 1.
+            semester af multimediadesign på KEA. Jeg er opvokset i Vejle og
+            flyttede til København for 5 år siden, da jeg vr færdig med
+            gymnasiet.
           </p>
         </div>
       </section>
+      <section class="grid_container">
+        <div>
+          <p>
+            Jeg elsker dyr rigtig meget, og har gennem mit liv haft mange
+            kæledyr - især katte, som klart er dem jeg har haft flest af
+          </p>
+        </div>
+        <div><img src="img/ommig2.jpg" alt="mig og olaf" /></div>
+      </section>
+      <div class="cv">
+        Vil du vide mere om mig? <a href="#">Så tryk her for at se mit cv</a>
+      </div>
     </main>
+    <footer>&copy;REBEKKA NUTZHORN</footer>
     <script src="js/javascript.js"></script>
   </body>
 </html>
