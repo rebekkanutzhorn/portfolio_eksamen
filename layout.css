@@ -1,3 +1,13 @@
+@font-face {
+  font-family: pilowlava;
+  src: url(font/webfonts/Pilowlava-Regular.woff);
+}
+
+@font-face {
+  font-family: league;
+  src: url(font/WOFF/LeagueGothic-Regular.woff);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -5,7 +15,7 @@
 
 body,
 html {
-  /* background-color: rgba(235, 209, 159, 1); */
+  /* background-color: #dfaee0; */
   margin: 0;
   padding: 0;
   height: 100%;
@@ -94,9 +104,10 @@ a {
 }
 
 .nav-logo {
-  /* font-size: 2.1rem;
-  font-weight: 500; */
-  color: #1d1170;
+  font-size: 2.1rem;
+  font-weight: 500;
+  font-family: pilowlava;
+  color: #76de08;
   max-width: 90px;
   height: auto;
 }
@@ -108,7 +119,7 @@ a {
     left: -100%;
     top: 5rem;
     flex-direction: column;
-    background-color: #b7329f;
+    background-color: #0d0d0d;
     width: 100%;
     border-radius: 10px;
     text-align: center;
@@ -144,26 +155,64 @@ a {
     rotate: -45deg;
   }
 }
-
-h1 {
-  text-align: center;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  color: white;
-  padding: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 90vw;
-  height: 90vh;
-  margin: 0;
-  font-size: 9vw;
-  text-align: center;
-  z-index: 1;
-
-  /* animation: zoomInOut 7s infinite; */
+.slide-in1 {
+  font-family: pilowlava;
+  font-size: 100px;
+  font-weight: bold;
+  color: #76de08;
+  position: relative;
+  animation: slideIn 6s infinite linear;
 }
 
-.rotateh1 {
+.slide-in2 {
+  font-family: pilowlava;
+  font-size: 100px;
+  font-weight: bold;
+  color: black;
+  position: relative;
+  animation: slideIn 6s infinite linear;
+  animation-delay: 0.3s;
+}
+
+.slide-in3 {
+  font-family: pilowlava;
+  font-size: 100px;
+  font-weight: bold;
+  color: black;
+  position: relative;
+  animation: slideIn 6s infinite linear;
+  animation-delay: 0.7s;
+}
+
+.slide-in4 {
+  font-family: pilowlava;
+  font-size: 100px;
+  font-weight: bold;
+  color: #76de08;
+  position: relative;
+  animation: slideIn 6s infinite linear;
+  animation-delay: 1s;
+}
+
+@keyframes slideIn {
+  0% {
+    left: -110%;
+  }
+  100% {
+    left: 110%;
+  }
+}
+
+.portfolio {
+  text-align: center;
+  font-size: 30px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(251, 249, 249);
+  margin: 15px;
+  padding: 30px;
+}
+
+/* .rotateh1 {
   animation: rotateY 6s infinite linear;
 }
 
@@ -174,7 +223,7 @@ h1 {
   to {
     transform: rotateY(360deg);
   }
-}
+} */
 /* @keyframes zoomInOut {
   0%,
   100% {
@@ -204,28 +253,45 @@ h1 {
 }
 
 .fade-in-section:hover {
-  opacity: 0.6;
+  background-color: white;
+  opacity: 0.8;
   transition: opacity 0.4s;
 }
 
 #box01 {
-  background-color: rgb(28, 28, 129);
+  border: solid black;
 }
 
 #box02 {
-  background-color: rgb(28, 28, 129);
+  border: solid black;
 }
 
 #box03 {
-  background-color: rgb(28, 28, 129);
+  border: solid black;
 }
 
 #box04 {
-  background-color: rgb(28, 28, 129);
+  border: solid black;
 }
 
 #box05 {
-  background-color: rgb(28, 28, 129);
+  border: solid black;
+}
+
+h2 {
+  color: white;
+  font-size: large;
+}
+
+.grid_portfolio {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+  background-color: grey;
+  opacity: 80%;
+  border: solid white;
+  padding: 10px;
+  margin: 10px;
 }
 
 @media (min-width: 1000px) {
@@ -265,15 +331,15 @@ img {
 .cv {
   background-color: white;
   text-align: center;
-  padding: 10px;
+  padding: 20px;
   margin: 15px;
   font-size: 200%;
 }
 
-#tilbage_portfolio {
+.tilbage_portfolio {
   position: absolute;
   font-size: large;
-  align-items: center;
+  text-align: center;
   background-color: white;
   padding: 20px;
 }
