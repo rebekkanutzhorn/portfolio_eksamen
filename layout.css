@@ -28,8 +28,8 @@ main {
 
 p {
   font-family: Arial, Helvetica, sans-serif;
-  color: white;
-  font-size: medium;
+  color: rgb(19, 18, 18);
+  font-size: 2vw;
   padding-top: 50px;
   max-width: 65ch;
 }
@@ -56,11 +56,6 @@ li {
 a {
   text-decoration: none;
   font-size: larger;
-  color: white;
-}
-
-a :hover {
-  color: black;
 }
 
 .navbar {
@@ -113,12 +108,11 @@ a :hover {
   font-size: 2.1rem;
   font-weight: 500;
   font-family: pilowlava;
-  color: #76de08;
+  color: white;
   max-width: 90px;
   height: auto;
 }
 
-/* step 7 */
 @media (max-width: 550px) {
   .nav-menu {
     position: fixed;
@@ -161,43 +155,37 @@ a :hover {
     rotate: -45deg;
   }
 }
+
 .slide-in1 {
   font-family: pilowlava;
-  font-size: 100px;
+  font-size: 12vw;
   font-weight: bold;
-  color: #76de08;
+  color: rgb(96, 16, 195);
   position: relative;
-  animation: slideIn 6s infinite linear;
 }
 
 .slide-in2 {
   font-family: pilowlava;
-  font-size: 100px;
+  font-size: 12vw;
   font-weight: bold;
   color: black;
   position: relative;
-  animation: slideIn 6s infinite linear;
-  animation-delay: 0.3s;
 }
 
 .slide-in3 {
   font-family: pilowlava;
-  font-size: 100px;
+  font-size: 12vw;
   font-weight: bold;
   color: black;
   position: relative;
-  animation: slideIn 6s infinite linear;
-  animation-delay: 0.7s;
 }
 
 .slide-in4 {
   font-family: pilowlava;
-  font-size: 100px;
+  font-size: 12vw;
   font-weight: bold;
-  color: #76de08;
+  color: rgb(96, 16, 195);
   position: relative;
-  animation: slideIn 6s infinite linear;
-  animation-delay: 1s;
 }
 
 @keyframes slideIn {
@@ -206,6 +194,31 @@ a :hover {
   }
   100% {
     left: 110%;
+  }
+}
+
+@media (min-width: 650px) {
+  .slide-in1 {
+    font-size: 100px;
+    animation: slideIn 6s infinite linear;
+  }
+
+  .slide-in2 {
+    font-size: 100px;
+    animation: slideIn 6s infinite linear;
+    animation-delay: 0.3s;
+  }
+
+  .slide-in3 {
+    font-size: 100px;
+    animation: slideIn 6s infinite linear;
+    animation-delay: 0.7s;
+  }
+
+  .slide-in4 {
+    font-size: 100px;
+    animation: slideIn 6s infinite linear;
+    animation-delay: 1s;
   }
 }
 
@@ -244,10 +257,10 @@ a :hover {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.8s ease-out, transform 0.6s ease-out;
-  padding: 200px;
-  margin: 20px 0;
+  padding: 180px;
+  margin: 30px 0;
   width: auto;
-  color: beige;
+  color: rgb(226, 226, 215);
   border-radius: 8px;
   text-align: center;
   font-size: large;
@@ -285,19 +298,25 @@ a :hover {
 }
 
 h2 {
-  color: white;
+  color: rgb(18, 17, 18);
   font-size: large;
 }
 
 .grid_portfolio {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1em;
-  background-color: grey;
+  background-color: rgb(212, 228, 239);
+  border-radius: 15px;
   opacity: 80%;
   border: solid white;
-  padding: 10px;
-  margin: 10px;
+  padding: 15px;
+  margin: 30px;
+}
+
+@media (min-width: 600px) {
+  .grid_portfolio {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+  }
 }
 
 @media (min-width: 1000px) {
@@ -312,12 +331,76 @@ h2 {
     grid-template-columns: 1fr 1fr;
     gap: 1em;
   }
-  .link_pic {
-    max-width: 80%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
+
+  .slide-in1 {
+    animation: slideIn 9s infinite linear;
   }
+
+  .slide-in2 {
+    animation: slideIn 9s infinite linear;
+    animation-delay: 0.3s;
+  }
+
+  .slide-in3 {
+    animation: slideIn 9s infinite linear;
+    animation-delay: 0.7s;
+  }
+
+  .slide-in4 {
+    animation: slideIn 9s infinite linear;
+    animation-delay: 1s;
+  }
+}
+
+.portfolio_pic {
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  display: inline-block;
+  width: auto;
+}
+
+.link_pic {
+  display: block;
+  max-width: 80%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  filter: blur(0);
+  transition: filter 0.3s ease;
+}
+
+.portfolio_pic:hover .link_pic {
+  filter: blur(2px);
+  background-color: grey;
+  opacity: 70%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  background-color: white(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.portfolio_pic:hover .overlay {
+  opacity: 1;
+}
+
+.imgtext {
+  color: rgb(250, 247, 247);
+  font-size: 40px;
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 footer {
@@ -337,15 +420,20 @@ img {
 .grid_container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1em;
+  gap: 2em;
+  border-radius: 10px;
+  background-color: rgb(219, 210, 210);
+  opacity: 90%;
+  padding: 15px;
+  margin: 20px;
 }
 
 .cvgrid_1-1-1 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 1em;
-  background-color: rgb(179, 174, 174);
-  opacity: 80%;
+  background-color: rgb(246, 241, 241);
+  opacity: 70%;
   border-radius: 30px;
   text-align: center;
   padding: 20px;
@@ -354,10 +442,16 @@ img {
 }
 
 .tilbage_portfolio {
-  position: absolute;
+  position: relative;
   font-size: large;
   text-align: center;
-  background-color: white;
+  background-color: rgb(233, 241, 239);
+  opacity: 80%;
   border-radius: 20px;
   padding: 20px;
+  color: black;
+}
+
+.tilbage_portfolio :hover {
+  color: black;
 }
