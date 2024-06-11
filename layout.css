@@ -29,7 +29,7 @@ main {
 p {
   font-family: Arial, Helvetica, sans-serif;
   color: rgb(19, 18, 18);
-  font-size: 2vw;
+  font-size: 16px;
   padding-top: 50px;
   max-width: 65ch;
 }
@@ -73,7 +73,7 @@ a {
   height: 3px;
   margin: 5px auto;
   transition: all 0.3s ease-in-out;
-  background-color: #101010;
+  background-color: #f0f0f0;
 }
 /* ... go gøres usynlig */
 /* step 5 */
@@ -108,7 +108,7 @@ a {
   font-size: 2.1rem;
   font-weight: 500;
   font-family: pilowlava;
-  color: white;
+  color: #76de08;
   max-width: 90px;
   height: auto;
 }
@@ -119,12 +119,13 @@ a {
     left: -100%;
     top: 5rem;
     flex-direction: column;
-    background-color: #0d0d0d;
+    background-color: #2f13ab;
+    opacity: 95%;
     width: 100%;
     border-radius: 10px;
     text-align: center;
     transition: 0.3s;
-    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 27px rgba(30, 42, 223, 0.05);
   }
 
   .nav-menu.active {
@@ -160,7 +161,7 @@ a {
   font-family: pilowlava;
   font-size: 12vw;
   font-weight: bold;
-  color: rgb(96, 16, 195);
+  color: #76de08;
   position: relative;
 }
 
@@ -184,7 +185,7 @@ a {
   font-family: pilowlava;
   font-size: 12vw;
   font-weight: bold;
-  color: rgb(96, 16, 195);
+  color: #76de08;
   position: relative;
 }
 
@@ -298,8 +299,14 @@ a {
 }
 
 h2 {
+  font-family: Helvetica, sans-serif;
   color: rgb(18, 17, 18);
-  font-size: large;
+  font-size: 20px;
+}
+
+h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
 }
 
 .grid_portfolio {
@@ -308,7 +315,8 @@ h2 {
   opacity: 80%;
   border: solid white;
   padding: 15px;
-  margin: 30px;
+  margin: 30px auto;
+  max-width: 1200px;
 }
 
 @media (min-width: 600px) {
@@ -349,6 +357,14 @@ h2 {
   .slide-in4 {
     animation: slideIn 9s infinite linear;
     animation-delay: 1s;
+  }
+  .cvgrid_1-1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 1200px;
+    margin: 10px auto;
   }
 }
 
@@ -408,6 +424,7 @@ footer {
   position: sticky;
   padding-bottom: 5px;
   font-style: oblique;
+  font-size: 12px;
   color: black;
   z-index: 1;
 }
@@ -422,23 +439,23 @@ img {
   grid-template-columns: 1fr 1fr;
   gap: 2em;
   border-radius: 10px;
-  background-color: rgb(219, 210, 210);
+  background-color: white;
   opacity: 90%;
   padding: 15px;
-  margin: 20px;
+  margin: 15px auto;
+  max-width: 1200px;
+  align-items: center;
 }
 
-.cvgrid_1-1-1 {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 1em;
-  background-color: rgb(246, 241, 241);
+.cv {
+  background-color: white;
   opacity: 70%;
-  border-radius: 30px;
+  border-radius: 20px;
   text-align: center;
-  padding: 20px;
+  padding: 15px;
   margin: 15px;
-  font-size: 200%;
+  font-size: 150%;
+  font-weight: bold;
 }
 
 .tilbage_portfolio {
